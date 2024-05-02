@@ -1,0 +1,30 @@
+{
+  "name": "refactoring-katas",
+  "version": "3.0.0",
+  "description": "Refactoring Katas",
+  "main": "build/index.js",
+  "files": [
+    "build",
+    "!build/**/*.test.*"
+  ],
+  "license": "ISC",
+  "scripts": {
+    "prepare": "npm run build",
+    "prestart": "npm run build",
+    "start": "node build/index.js",
+    "build": "npm run lint && tsc --noEmit",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "vitest run --reporter=verbose",
+    "test:watch": "npm run test -- --watchAll",
+    "test:coverage": "npm run test -- --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@typescript-eslint/parser": "^6.18.1",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "vitest": "^0.34.6"
+  }
+}
