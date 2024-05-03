@@ -26,12 +26,12 @@ Antes de irse, María le dejó al brujo una lista con los objetos que suele reco
     - Piedra
     - Carbón
     - Mena de cobre
-    - Mena de plata
+    - Mena de hierro
 - Semillas:
     - Semilla de trigo
-    - Semilla de batata
+    - Semilla de patata
     - Semilla de zanahora
-    - Semilla de calabacín
+    - Semilla de maíz
     - Semilla de col rizada
 - Comida:
     - Frambuesa
@@ -56,7 +56,7 @@ María acaba de llegar a casa y tiene la mochila llena de objetos:
 - 3 Piedra
 - 1 Seta
 - 4 Semilla de trigo
-- 2 Semilla de batata
+- 2 Semilla de patata
 - 1 Trucha
 - 3 Mena de cobre
 
@@ -67,7 +67,7 @@ Recita el conjuro y los objetos se ordenan en los cofres vacíos de la siguiente
   - 3 Mena de cobre
   - 3 Piedra
 - Cofre de semillas:
-  - 2 Semilla de batata
+  - 2 Semilla de patata
   - 4 Semilla de trigo
 - Cofre de comida:
   - 1 Seta

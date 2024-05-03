@@ -27,7 +27,7 @@ export class Farmer {
         case 'stone':
         case 'coal':
         case 'cooper ore':
-        case 'steel ore':
+        case 'iron ore':
           const items1 = this.chest1.filter((chestItem) => chestItem.name === item.name);
           // if not exist any item with the same name, add the item to the chest
           if(items1.length === 0 && this.chest1.length < 16) {
@@ -52,9 +52,9 @@ export class Farmer {
           break;
         //seeds
         case 'wheat seed':
-        case 'sweet potato seed':
+        case 'potato seed':
         case 'carrot seed':
-        case 'courgette seed':
+        case 'corn seed':
         case 'kale seed':
           const items2 = this.chest2.filter((chestItem) => chestItem.name === item.name);
           // if not exist any item with the same name, add the item to the chest

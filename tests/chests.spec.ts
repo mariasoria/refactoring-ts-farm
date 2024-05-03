@@ -10,7 +10,7 @@ describe('Farmer', () => {
         {name: 'stone', quantity: 3},
         {name: 'mushroom', quantity: 1},
         {name: 'wheat seed', quantity: 4},
-        {name: 'sweet potato seed', quantity: 2},
+        {name: 'potato seed', quantity: 2},
         {name: 'trout', quantity: 1},
         {name: 'cooper ore', quantity: 3},
       ]
@@ -21,7 +21,7 @@ describe('Farmer', () => {
         {name: 'wood', quantity: 2}
       ]
       const sortedSeeds: Item[] = [
-        {name: 'sweet potato seed', quantity: 2},
+        {name: 'potato seed', quantity: 2},
         {name: 'wheat seed', quantity: 4}
       ]
 
@@ -45,7 +45,7 @@ describe('Farmer', () => {
         {name: 'stone', quantity: 3},
         {name: 'mushroom', quantity: 1},
         {name: 'wheat seed', quantity: 4},
-        {name: 'sweet potato seed', quantity: 2},
+        {name: 'potato seed', quantity: 2},
         {name: 'trout', quantity: 1},
         {name: 'cooper ore', quantity: 3},
       ]
