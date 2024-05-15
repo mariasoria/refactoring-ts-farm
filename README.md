@@ -72,3 +72,7 @@ Recita el conjuro y los objetos se ordenan en los cofres vacíos de la siguiente
 - Cofre de comida:
   - 1 Seta
   - 1 Trucha
+
+## 2. Kata Herramientas
+
+### 2.1. Descripción
