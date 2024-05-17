@@ -76,3 +76,45 @@ Recita el conjuro y los objetos se ordenan en los cofres vacíos de la siguiente
 ## 2. Kata Herramientas
 
 ### 2.1. Descripción
+
+Han pasado unos meses desde que el brujo le dio el hechizo de ordenación a María, el cual ha hecho que su tarea de 
+recolectar haya mejorado muchísimo.
+
+Sin embargo, María se ha dado cuenta de que, para reparar ciertas instalaciones de la granja, va a necesitar una gran
+cantidad de materiales de construcción. Las fuentes de las que suele obtener estos materiales no dan suficiente cantidad, 
+lo que la hace avanzar muy lentamente. Pero aquellas fuentes que sí dan más recursos, son más difíciles de explotar: algunas
+requieren mucha energía y María se cansa rápidamente, otras ni siquiera es capaz de romperlas.
+
+Es por eso que decide ir a preguntar a la carpintería. Allí le dicen que tan solo tiene que mejorar sus 
+herramientas para poder recolectar más cantidad de materiales. María, emocionada, le pide que le enseñe cómo hacerlo.
+La carpintera le da las siguientes recetas:
+
+- Mejorar a cobre:
+    - 1 herramienta
+    - 5 barras de cobre
+    - 5 maderas
+
+- Mejorar a acero:
+    - 1 herramienta
+    - 5 barras de hierro
+    - 5 maderas
+
+María vuelve a su granja algo decepcionada. Ella no tiene barras de hierro ni de cobre y tampoco sabe como conseguirlas.
+Después de pensarlo un poco, recuerda que en el pueblo hay un herrero que seguro que puede ayudarla. Al contarle su
+problema, el herrero le da dos recetas: una para hacer barras de hierro y otra para las de cobre.
+
+- Barras de hierro:
+    - 5 menas de hierro
+    - 1 carbón
+
+- Barras de cobre:
+    - 5 menas de cobre
+    - 1 carbón
+
+Además, como herrero, sabe lo difícil que puede ser conseguir carbón, así que también le da una receta para hacerlo.
+
+- Carbón:
+    - 5 maderas
+
+Con todas las recetas, un horno para carbón y un horno para fundir las menas, María se pone manos a la obra para mejorar
+sus herramientas y poder conseguir materiales más rápido.
