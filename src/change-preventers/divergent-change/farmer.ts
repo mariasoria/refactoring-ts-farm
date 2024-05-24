@@ -15,10 +15,9 @@ export class Farmer {
   plantedSeeds: PlantedSeed[] = []
   inventory: Item[] = []
 
-  constructor(coins: number = 100, energy: number = 200, calendar: Calendar = { day: 1, season: 'Spring'}) {
+  constructor(coins: number = 100, energy: number = 200) {
     this.coins = coins
     this.energy = energy
-    this.calendar = calendar
   }
 
   plantCrop(seed: Seed, calendar: Calendar = { day: 1, season: 'Spring'}) {
