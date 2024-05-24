@@ -48,7 +48,7 @@ export class Farmer {
     })
   }
 
-  harvestCropParallel(calendar: Calendar = this.calendar) {
+  harvestCropParallel(calendar: Calendar = { day: 1, season: 'Spring'}) {
     this.plantedSeeds.forEach(plantedSeed => {
       if(this.energy < 5) {
         throw new Error('Not enough energy to harvest crop')
