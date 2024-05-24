@@ -32,18 +32,18 @@ describe('Farmer', () => {
     expect(() => farmer.plantCrop(cornSeed, calendar)).toThrowError('Not enough energy to plant crop')
   })
 
-  it('Parallel - should harvest a crop when her energy is enough', () => {
+  it('should harvest a crop when her energy is enough', () => {
       const farmer = new Farmer()
       const cauliflower =  new Crop('Cauliflower', 175)
       const cauliflowerSeed: Seed = new Seed('Cauliflower seed', 80, 12, 'Spring', cauliflower)
       const plantedSeed: PlantedSeed = {seed: cauliflowerSeed, plantedDay: 1}
       farmer.plantedSeeds = [plantedSeed]
       const calendar : Calendar = { day: 24, season: 'Spring'}
-      farmer.harvestCropParallel(calendar)
+      farmer.harvestCrop(calendar)
       expect(farmer.inventory).toContain(cauliflower)
     })
 
-  it('Parallel - should not harvest a crop when her energy is not enough', () => {
+  it('should not harvest a crop when her energy is not enough', () => {
       const farmer = new Farmer()
       farmer.energy = 4
       const garlic =  new Crop('Garlic', 60)
@@ -51,10 +51,10 @@ describe('Farmer', () => {
       const plantedSeed: PlantedSeed = {seed: garlicSeed, plantedDay: 1}
       farmer.plantedSeeds = [plantedSeed]
       const calendar : Calendar = { day: 15, season: 'Spring'}
-      expect(() => farmer.harvestCropParallel(calendar)).toThrowError('Not enough energy to harvest crop')
+      expect(() => farmer.harvestCrop(calendar)).toThrowError('Not enough energy to harvest crop')
     })
 
-  it('Parallel - should not harvest a crop when it is not ready', () => {
+  it('should not harvest a crop when it is not ready', () => {
       const farmer = new Farmer()
       const greenBean =  new Crop('Green bean', 40)
       const beanStarter: Seed = new Seed('Bean starter', 60, 10, 'Spring', greenBean)
