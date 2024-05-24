@@ -9,7 +9,7 @@ describe('Farmer', () => {
       const carrot =  new Crop('Carrot', 35)
       const carrotSeed: Seed = new Seed('Carrot seed', 30, 3, 'Spring', carrot)
       farmer.inventory = [carrotSeed]
-      farmer.plantCropParallel(carrotSeed)
+      farmer.plantCrop(carrotSeed)
       const plantedSeed: PlantedSeed = {seed: carrotSeed, plantedDay: 1}
       expect(farmer.plantedSeeds).toStrictEqual([plantedSeed])
     })
@@ -19,7 +19,7 @@ describe('Farmer', () => {
       const blueberry =  new Crop('Blueberry', 50)
       const blueberrySeed: Seed = new Seed('Blueberry seed', 80, 13, 'Summer', blueberry)
       farmer.inventory = [blueberrySeed]
-      expect(() => farmer.plantCropParallel(blueberrySeed)).toThrowError('Cannot plant crop in this season')
+      expect(() => farmer.plantCrop(blueberrySeed)).toThrowError('Cannot plant crop in this season')
     })
 
   it('should not plant a seed when her energy is not enough', () => {
@@ -29,7 +29,7 @@ describe('Farmer', () => {
     const cornSeed: Seed = new Seed('Corn seed', 150, 14, 'Summer', corn)
     farmer.inventory = [cornSeed]
     const calendar : Calendar = { day: 10, season: 'Summer'}
-    expect(() => farmer.plantCropParallel(cornSeed, calendar)).toThrowError('Not enough energy to plant crop')
+    expect(() => farmer.plantCrop(cornSeed, calendar)).toThrowError('Not enough energy to plant crop')
   })
 
 

@@ -21,7 +21,7 @@ export class Farmer {
     this.calendar = calendar
   }
 
-  plantCropParallel(seed: Seed, calendar: Calendar = { day: 1, season: 'Spring'}) {
+  plantCrop(seed: Seed, calendar: Calendar = { day: 1, season: 'Spring'}) {
     if(calendar.season !== seed.season) {
       throw new Error('Cannot plant crop in this season')
     }
