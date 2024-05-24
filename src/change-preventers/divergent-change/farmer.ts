@@ -35,6 +35,20 @@ export class Farmer {
     this.inventory = this.inventory.filter(item => item.name !== seed.name)
   }
 
+  plantCropParallel(seed: Seed, calendar: Calendar = this.calendar) {
+    if(calendar.season !== seed.season) {
+      throw new Error('Cannot plant crop in this season')
+    }
+
+    if(this.energy < 2) {
+      throw new Error('Not enough energy to plant crop')
+    }
+
+    this.energy -= 2
+    this.plantedSeeds.push({seed, plantedDay: calendar.day})
+    this.inventory = this.inventory.filter(item => item.name !== seed.name)
+  }
+
   harvestCrop() {
     this.plantedSeeds.forEach(plantedSeed => {
       if(this.energy < 5) {
