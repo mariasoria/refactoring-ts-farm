@@ -5,16 +5,6 @@ import {Calendar} from "./calendar";
 
 describe('Farmer', () => {
   it('should plant a seed when her energy is enough', () => {
-    const farmer = new Farmer()
-    const carrot =  new Crop('Carrot', 35)
-    const carrotSeed: Seed = new Seed('Carrot seed', 30, 3, 'Spring', carrot)
-    farmer.inventory = [carrotSeed]
-    farmer.plantCrop(carrotSeed)
-    const plantedSeed: PlantedSeed = {seed: carrotSeed, plantedDay: 1}
-    expect(farmer.plantedSeeds).toStrictEqual([plantedSeed])
-  })
-
-  it('Parallel - should plant a seed when her energy is enough', () => {
       const farmer = new Farmer()
       const carrot =  new Crop('Carrot', 35)
       const carrotSeed: Seed = new Seed('Carrot seed', 30, 3, 'Spring', carrot)
@@ -25,14 +15,6 @@ describe('Farmer', () => {
     })
 
   it('should not plant a seed in a different season', () => {
-    const farmer = new Farmer()
-    const blueberry =  new Crop('Blueberry', 50)
-    const blueberrySeed: Seed = new Seed('Blueberry seed', 80, 13, 'Summer', blueberry)
-    farmer.inventory = [blueberrySeed]
-    expect(() => farmer.plantCrop(blueberrySeed)).toThrowError('Cannot plant crop in this season')
-  })
-
-  it('Parallel - should not plant a seed in a different season', () => {
       const farmer = new Farmer()
       const blueberry =  new Crop('Blueberry', 50)
       const blueberrySeed: Seed = new Seed('Blueberry seed', 80, 13, 'Summer', blueberry)
@@ -41,16 +23,6 @@ describe('Farmer', () => {
     })
 
   it('should not plant a seed when her energy is not enough', () => {
-    const farmer = new Farmer()
-    farmer.energy = 1
-    farmer.calendar = { day: 10, season: 'Summer'}
-    const corn =  new Crop('Corn', 50)
-    const cornSeed: Seed = new Seed('Corn seed', 150, 14, 'Summer', corn)
-    farmer.inventory = [cornSeed]
-    expect(() => farmer.plantCrop(cornSeed)).toThrowError('Not enough energy to plant crop')
-  })
-
-  it('Parallel - should not plant a seed when her energy is not enough', () => {
     const farmer = new Farmer()
     farmer.energy = 1
     const corn =  new Crop('Corn', 50)
