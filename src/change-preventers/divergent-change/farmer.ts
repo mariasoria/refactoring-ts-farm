@@ -21,20 +21,6 @@ export class Farmer {
     this.calendar = calendar
   }
 
-  plantCrop(seed: Seed) {
-    if(this.calendar.season !== seed.season) {
-      throw new Error('Cannot plant crop in this season')
-    }
-
-    if(this.energy < 2) {
-      throw new Error('Not enough energy to plant crop')
-    }
-
-    this.energy -= 2
-    this.plantedSeeds.push({seed, plantedDay: this.calendar.day})
-    this.inventory = this.inventory.filter(item => item.name !== seed.name)
-  }
-
   plantCropParallel(seed: Seed, calendar: Calendar = { day: 1, season: 'Spring'}) {
     if(calendar.season !== seed.season) {
       throw new Error('Cannot plant crop in this season')
