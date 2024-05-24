@@ -11,7 +11,6 @@ export type PlantedSeed = {
 export class Farmer {
   coins: number
   energy: number
-
   plantedSeeds: PlantedSeed[] = []
   inventory: Item[] = []
 
