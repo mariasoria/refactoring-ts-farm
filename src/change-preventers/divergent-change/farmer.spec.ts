@@ -44,6 +44,17 @@ describe('Farmer', () => {
     expect(farmer.inventory).toContain(cauliflower)
   })
 
+  it('Parallel - should harvest a crop when her energy is enough', () => {
+      const farmer = new Farmer()
+      farmer.calendar = { day: 24, season: 'Spring'}
+      const cauliflower =  new Crop('Cauliflower', 175)
+      const cauliflowerSeed: Seed = new Seed('Cauliflower seed', 80, 12, 'Spring', cauliflower)
+      const plantedSeed: PlantedSeed = {seed: cauliflowerSeed, plantedDay: 1}
+      farmer.plantedSeeds = [plantedSeed]
+      farmer.harvestCropParallel()
+      expect(farmer.inventory).toContain(cauliflower)
+    })
+
   it('should not harvest a crop when her energy is not enough', () => {
     const farmer = new Farmer()
     farmer.energy = 4
@@ -55,6 +66,17 @@ describe('Farmer', () => {
     expect(() => farmer.harvestCrop()).toThrowError('Not enough energy to harvest crop')
   })
 
+  it('Parallel - should not harvest a crop when her energy is not enough', () => {
+      const farmer = new Farmer()
+      farmer.energy = 4
+      farmer.calendar = { day: 15, season: 'Spring'}
+      const garlic =  new Crop('Garlic', 60)
+      const garlicSeed: Seed = new Seed('Garlic seed', 40, 4, 'Spring', garlic)
+      const plantedSeed: PlantedSeed = {seed: garlicSeed, plantedDay: 1}
+      farmer.plantedSeeds = [plantedSeed]
+      expect(() => farmer.harvestCropParallel()).toThrowError('Not enough energy to harvest crop')
+    })
+
   it('should not harvest a crop when it is not ready', () => {
     const farmer = new Farmer()
     farmer.calendar = { day: 8, season: 'Spring'}
@@ -64,6 +86,16 @@ describe('Farmer', () => {
     farmer.plantedSeeds = [plantedSeed]
     expect(farmer.inventory).not.toContain(greenBean)
   })
+
+  it('Parallel - should not harvest a crop when it is not ready', () => {
+      const farmer = new Farmer()
+      farmer.calendar = { day: 8, season: 'Spring'}
+      const greenBean =  new Crop('Green bean', 40)
+      const beanStarter: Seed = new Seed('Bean starter', 60, 10, 'Spring', greenBean)
+      const plantedSeed: PlantedSeed = {seed: beanStarter, plantedDay: 1}
+      farmer.plantedSeeds = [plantedSeed]
+      expect(farmer.inventory).not.toContain(greenBean)
+    })
 
   it('should sell a crop', () => {
     const farmer = new Farmer()
